@@ -34,14 +34,14 @@
   box-shadow: none;
 }
 
-#main-content #accordion .panel-heading .accordion-toggle span.accordion-icon {
+#accordion .panel-heading .accordion-toggle span.accordion-icon {
   float: right;
   display: block;
   width: auto;
   height: auto;
 }
 
-#main-content #accordion .panel-heading .accordion-toggle.collapsed span.accordion-icon img {
+#accordion .panel-heading .accordion-toggle.collapsed span.accordion-icon img {
   margin: 0;
   padding: 0;
   width: 12px;
@@ -54,7 +54,7 @@
   transition-duration: .25s;
 }
 
-#main-content #accordion .panel-heading .accordion-toggle span.accordion-icon img {
+#accordion .panel-heading .accordion-toggle span.accordion-icon img {
   margin: 0;
   padding: 0;
   width: 12px;
@@ -65,6 +65,10 @@
   -o-transform: rotate(90deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   transition-duration: .25s;
+}
+
+.panel {
+  background:none !important;
 }
 
 /* END - CSS */
