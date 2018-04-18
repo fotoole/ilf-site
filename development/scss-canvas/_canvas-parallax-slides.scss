@@ -22,112 +22,120 @@
 }
 
 .slide1{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9000;
 }
 
+/* intro panel */
 .slide2{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9001;
 }
 
 .slide3{
-	background: url('../images/01-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/01-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 2 */
 .slide4{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9002;
 }
 
 .slide5{
-	background: url('../images/02-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/02-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 3 */
 .slide6{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9003;
 }
 
 .slide7{
-	background: url('../images/03-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/03-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 4 */
 .slide8{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9004;
 }
 
 .slide9{
-	background: url('../images/04-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/04-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 5 */
 .slide10{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9005;
 }
 
 .slide11{
-	background: url('../images/05-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/05-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 6 */
 .slide12{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9006;
 }
 
 .slide13{
-	background: url('../images/06-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/06-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 7 */
 .slide14{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9007;
 }
 
 .slide15{
-	background: url('../images/07-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
+	// background: url('../images/07-canvas-parallax-image-light-fpo-1000-560.jpg') 50% 0 no-repeat fixed;
 	height: 600px;
 	padding: 0;
 	background-size: cover;
 }
 
+/* panel 8 */
 .slide16{
-	background: url('../images/pattern-spiration-light.png');
+	// background: url('../images/pattern-spiration-light.png');
 	background-color: #e2e2e2;
 	height: auto;
 	z-index: 9008;
@@ -149,6 +157,33 @@ section.arrupe-introduction .image-mobile img, .image-mobile { display: none; }
 }*/
 
 .image-mobile img { background-color: #cccccc; }
+
+
+
+
+/*  FO on ILF below  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+#parallax-panel-two h1 span,
+#parallax-panel-four h1 span,
+#parallax-panel-six h1 span,
+#parallax-panel-eight h1 span {
+	font-family:"Antenna Thin", sans-serif !important;
+	font-weight:100;
+	text-transform: uppercase;
+	color:black;
+}
+
+#parallax-panel-two h1,
+#parallax-panel-four h1,
+#parallax-panel-six h1,
+#parallax-panel-eight h1 {
+	font-family:"Antenna", sans-serif !important;
+	font-weight:500;
+	text-transform: uppercase;
+	color:#922247;
+}
+
+/*  FO on ILF above  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
 
 /* MEDIA QUERIES */
