@@ -58,7 +58,7 @@
 .slide6{
 	// background: url('../images/pattern-spiration-light.png');
 	background-color: #922247;
-	height: auto;
+	height: 500px;
 	z-index: 9003;
 }
 
@@ -224,6 +224,29 @@ div.col-md-3.p-r-0 > img {
 	height:500px;
 	width:auto;
 }
+
+#parallax-panel-six > div > div > div.col-md-3.p-r-0.canvas-parallax-panel-padding > img {
+	height:auto;
+}
+
+p.caption {
+	color:white;
+	font-style:italic;
+}
+
+ul {
+	color:white;
+}
+
+#parallax-panel-ten {
+	height:500px;
+}
+
+#parallax-panel-ten .scroll {
+	height:210px;
+	overflow:scroll;
+}
+
 
 
 /*  FO on ILF above  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
