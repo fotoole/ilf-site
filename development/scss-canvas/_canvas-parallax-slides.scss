@@ -103,7 +103,7 @@
 .slide12{
 	// background: url('../images/pattern-spiration-light.png');
 	background-color: #922247;
-	height: auto;
+	height: 500px;
 	z-index: 9006;
 }
 
@@ -225,6 +225,7 @@ div.col-md-3.p-r-0 > img {
 	width:auto;
 }
 
+#parallax-panel-twelve > div > div > div.col-md-3.p-r-0.canvas-parallax-panel-padding > img,
 #parallax-panel-six > div > div > div.col-md-3.p-r-0.canvas-parallax-panel-padding > img {
 	height:auto;
 }
@@ -247,6 +248,27 @@ ul {
 	overflow:scroll;
 }
 
+#parallax-panel-twelve .scroll {
+	height:210px;
+	overflow:visible;
+}
+
+#parallax-panel-twelve #accordion {
+	margin-top:20px;
+}
+
+#parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > a {
+	color:#eaaa00 !important;
+}
+
+#accordion > div > div.panel-heading > h4 > a {
+	color:white;
+	font-family:"Antenna Light", sans-serif !important;
+}
+
+#accordion > div:nth-child(1) > div.panel-heading > h4 > a > span > img {
+	color:white !important;
+}
 
 
 /*  FO on ILF above  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
