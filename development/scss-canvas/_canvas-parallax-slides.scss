@@ -63,7 +63,7 @@
 }
 
 .slide7{
-	background: url('../images/pop-4.jpg') 50% 0 no-repeat fixed;
+	background: url('../images/pop-5.jpg') 50% 0 no-repeat fixed;
 	height: 700px;
 	padding: 0;
 	background-size: cover;
@@ -184,7 +184,7 @@ section.arrupe-introduction .image-mobile img, .image-mobile { display: none; }
 	text-transform: uppercase;
 	line-height:1em;
 	color:white;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 
 #accordion {
@@ -217,17 +217,24 @@ section.arrupe-introduction .image-mobile img, .image-mobile { display: none; }
 }
 
 p.body {
-	color:#aaaaaa;
+	color:#bcbcbc;
+	font-size: 1.075em;
+  line-height: 2;
 }
 
-div.col-md-3.p-r-0 > img {
-	height:500px;
-	width:auto;
-}
-
-#parallax-panel-twelve > div > div > div.col-md-3.p-r-0.canvas-parallax-panel-padding > img,
-#parallax-panel-six > div > div > div.col-md-3.p-r-0.canvas-parallax-panel-padding > img {
+#parallax-panel-two,
+#parallax-panel-four,
+#parallax-panel-six,
+#parallax-panel-eight,
+#parallax-panel-ten,
+#parallax-panel-twelve,
+#parallax-panel-fourteen {
 	height:auto;
+	overflow:hidden;
+	background-image:url("../images/vertical-knot-dark-tall.png");
+	background-repeat:no-repeat;
+	background-size:17%;
+	background-position: 85% 50%;
 }
 
 p.caption {
@@ -239,35 +246,23 @@ ul {
 	color:#aaaaaa;
 }
 
-#parallax-panel-ten {
-	height:500px;
-}
-
-#parallax-panel-ten .scroll {
-	height:210px;
-	overflow:scroll;
-}
-
-#parallax-panel-twelve .scroll {
-	height:210px;
-	overflow:visible;
-}
-
 #parallax-panel-twelve #accordion {
 	margin-top:20px;
 }
 
 #parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > a {
 	color:#eaaa00 !important;
+	cursor: pointer;
+}
+
+#parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > a:hover {
+	background:none;
+	color:#F4CC64;
 }
 
 #accordion > div > div.panel-heading > h4 > a {
 	color:white;
 	font-family:"Antenna Light", sans-serif !important;
-}
-
-#accordion > div:nth-child(1) > div.panel-heading > h4 > a > span > img {
-	color:white !important;
 }
 
 #slide1 > img {
@@ -280,14 +275,23 @@ ul {
 	border-top: 1px solid #aaaaaa !important;
 }
 
-#parallax-panel-six > div > div > div.col-md-3.p-r-0.canvas-parallax-panel-padding > img {
-	width:70%;
+#parallax-panel-two > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > p {
+	font-family:"Antenna Light", sans-serif !important;
+	font-size:1.2em;
+	line-height:2;
+	color:white;
 }
 
-#parallax-panel-two > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > p {
-	font-family:"Antenna Light"; sans-serif;
-	font-size:1.5em;
-	color:white;
+#slide1 > div.holder > div {
+	display: block;
+  width: 20%;
+  height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul li {
+	list-style-position: outside;
 }
 
 
