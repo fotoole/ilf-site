@@ -48,7 +48,7 @@
 }
 
 .slide5{
-	background: url('../images/party.jpg') 50% 0 no-repeat fixed;
+	background: url('../images/woman-arch-b.jpg') 50% 0 no-repeat fixed;
 	height: 700px;
 	padding: 0;
 	background-size: cover;
@@ -78,8 +78,8 @@
 }
 
 .slide9{
-	// background: url('../images/woman-arch.jpg') 50% 0 no-repeat fixed;
-	height: 500px;
+	background: url('../images/balcony.jpg') 50% 0 no-repeat fixed;
+	height: 700px;
 	padding: 0;
 	background-size: cover;
 }
@@ -108,7 +108,7 @@
 }
 
 .slide13{
-	background: url('../images/woman-arch.jpg') 50% 0 no-repeat fixed;
+	background: url('../images/basilica.jpg') 50% 0 no-repeat fixed;
 	height: 700px;
 	padding: 0;
 	background-size: cover;
@@ -166,10 +166,12 @@ section.arrupe-introduction .image-mobile img, .image-mobile { display: none; }
 #parallax-panel-ten h1 span,
 #parallax-panel-twelve h1 span,
 #parallax-panel-fourteen h1 span {
-	font-family:"Antenna Thin", sans-serif !important;
+	font-family:"Antenna Light", sans-serif !important;
 	font-weight:100;
-	text-transform: uppercase;
+	text-transform: none;
 	color:white;
+	font-size:1em;
+	line-height:1.3em;
 }
 
 #parallax-panel-two h1,
@@ -179,11 +181,13 @@ section.arrupe-introduction .image-mobile img, .image-mobile { display: none; }
 #parallax-panel-ten h1,
 #parallax-panel-twelve h1,
 #parallax-panel-fourteen h1 {
-	font-family:"Antenna", sans-serif !important;
+	font-family:"Antenna Bold", sans-serif !important;
 	font-weight:500;
-	text-transform: uppercase;
+	text-transform: initial;
 	line-height:1em;
 	color:white;
+	font-size:2.5em;
+	line-height:1.3em;
 	margin-bottom: 40px;
 }
 
@@ -242,27 +246,25 @@ p.caption {
 	font-style:italic;
 }
 
-ul {
-	color:#aaaaaa;
+ul,
+ol {
+	color:#bcbcbc;
 }
 
 #parallax-panel-twelve #accordion {
 	margin-top:20px;
 }
 
-#parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > a {
+#parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > a,
+#parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > p > a {
 	color:#eaaa00 !important;
 	cursor: pointer;
-}
-
-#parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > a:hover {
-	background:none;
-	color:#F4CC64;
 }
 
 #accordion > div > div.panel-heading > h4 > a {
 	color:white;
 	font-family:"Antenna Light", sans-serif !important;
+	letter-spacing: 0.05em;
 }
 
 #slide1 > img {
@@ -277,9 +279,10 @@ ul {
 
 #parallax-panel-two > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > p {
 	font-family:"Antenna Light", sans-serif !important;
-	font-size:1.2em;
+	font-size:1.1em;
 	line-height:2;
 	color:white;
+	margin-bottom: 20px;
 }
 
 #slide1 > div.holder > div {
@@ -290,8 +293,45 @@ ul {
   margin-right: auto;
 }
 
-ul li {
+ul li,
+ol li {
 	list-style-position: outside;
+}
+
+#parallax-panel-eight ol li a {
+	color:#eeb111;
+	margin-left:0px;
+}
+
+#parallax-panel-eight ol li a:hover {
+	background:none;
+	color:#F4CC64;
+}
+
+#contact {
+	margin-left:25px;
+	color:white;
+}
+
+#slide1 > div.holder > div > img {
+	height: 90%;
+	width: auto;
+	margin-left: -8%;
+	margin-top: 20px;
+}
+
+#parallax-panel-four #accordion {
+	margin-top:15px;
+	margin-left: 30px;
+}
+
+#parallax-panel-four #accordion > div:nth-child(1) {
+	border-top: none !important;
+}
+
+#parallax-panel-six #accordion {
+	margin-top:40px;
+	margin-bottom:230px;
 }
 
 
