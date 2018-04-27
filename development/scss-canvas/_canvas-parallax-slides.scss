@@ -235,7 +235,7 @@ p.body {
 #parallax-panel-fourteen {
 	height:auto;
 	overflow:hidden;
-	background-image:url("../images/vertical-knot-dark-tall.png");
+	background-image:url("../images/vertical-knot-dark-taller.png");
 	background-repeat:no-repeat;
 	background-size:17%;
 	background-position: 85% 50%;
@@ -262,7 +262,7 @@ ol {
 }
 
 #accordion > div > div.panel-heading > h4 > a {
-	color:white;
+	color:#e1e1e1;
 	font-family:"Antenna Light", sans-serif !important;
 	letter-spacing: 0.05em;
 }
@@ -287,8 +287,8 @@ ol {
 
 #slide1 > div.holder > div {
 	display: block;
-  width: 20%;
-  height: 280px;
+  width: 23%;
+  height: 320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -311,13 +311,14 @@ ol li {
 
 #contact {
 	margin-left:25px;
-	color:white;
+	color:#ececec;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #slide1 > div.holder > div > img {
-	height: 90%;
+	height: 100%;
 	width: auto;
-	margin-left: -8%;
 	margin-top: 20px;
 }
 
@@ -333,6 +334,56 @@ ol li {
 #parallax-panel-six #accordion {
 	margin-top:40px;
 	margin-bottom:230px;
+}
+
+#slide1 .scroller img {
+  height: 30px;
+	width:auto;
+	color:#bcbcbc;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#slide1 .scroller {
+	height: 60px;
+  text-align: center;
+	color:#bcbcbc;
+	font-family:"Antenna Light", sans-serif;
+	font-size:0.7em;
+  letter-spacing: 0.075em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#slide1 > div.holder > div.scroller > img {
+	width:6%;
+	height:auto;
+  margin-top: 3px !important;
+}
+
+.holder {
+	height:375px;
+}
+
+.vcard {
+	float: left;
+  padding: 15px 10px 15px 0;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: #525252;
+	margin-top: 10px;
+}
+
+#footer-address > div > div > div.col-sm-3 > a > img {
+  width: 80%;
+}
+
+#parallax-panel-four h4 {
+	font-family: "Antenna Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 25px;
 }
 
 
