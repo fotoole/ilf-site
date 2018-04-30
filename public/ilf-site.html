@@ -53,6 +53,34 @@
 
 <style>.subnave{display: none;}.homenav{display: block;}</style>
 
+<script>
+$(function () {
+$('.carousel').carousel({
+interval: false
+});
+});
+
+$(".carousel").swipe({
+swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+if (direction == 'left') $(this).carousel('next');
+if (direction == 'right') $(this).carousel('prev');
+},
+allowPageScroll:"vertical"
+});
+
+$('.carousel-split').each(function() {
+var carouselSelect = $(this);
+var totalItems = carouselSelect.find('.item').length;
+var currentIndex = carouselSelect.find('div.active').index() + 1;
+$('.counter').html(''+currentIndex+'/'+totalItems+'');
+$('.carousel').on('slid.bs.carousel', function () {
+currentIndex = $('div.active').index() + 1;
+$('.counter').html(''+currentIndex+'/'+totalItems+'');
+});
+});
+
+</script>
+
 </head>
 <body class="canvas-parallax">
 <section id="wrapper">
@@ -127,105 +155,80 @@
 
 				<h4 class="reverse">Approach</h4>
 					<p class="body">The Ignatian Legacy Fellows program takes its shape from the plan of the Spiritual Exercises of St. Ignatius—preparing oneself spiritually, intellectually, and professionally.</p>
+
+
+						<div class="panel-group accord-blk scroll" id="accordion">
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="subhead uppercase">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-uno">
+											Spiritual Guidance
+											<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+										</a>
+									</h4>
+								</div><!-- panel-heading -->
+								<div id="collapse-numero-uno" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p class="body">
+											The Spiritual Exercises are designed to assist the individual in better understanding the purpose of his or her life. They begin with and build upon a careful examination of one’s life experiences and interior life and encourage a careful examination of one’s motives and values. They foster the interior freedom that allows one to move forward with gratitude for one’s past while deepening one’s commitments toward the future. Expert guides are provided for the newcomer to the Exercises.
+										</p>
+									</div>
+								</div><!-- panel-collapse -->
+							</div><!-- panel -->
+
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="subhead uppercase">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-dos">
+											Intellectual Stimulation
+											<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+										</a>
+									</h4>
+								</div><!-- panel-heading -->
+								<div id="collapse-numero-dos" class="panel-collapse collapse">
+									<div class="panel-body">
+											<p class="body">
+												The highly dialogical and interactive sessions encourage participants to engage with assigned readings and the presentations by thought-provoking speakers, as well as discussions with faculty and students.
+											</p>
+									</div>
+								</div><!-- panel-collapse -->
+							</div><!-- panel -->
+
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="subhead uppercase">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-tres">
+											Sharing Professional Expertise
+											<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+										</a>
+									</h4>
+								</div><!-- panel-heading -->
+								<div id="collapse-numero-tres" class="panel-collapse collapse">
+									<div class="panel-body">
+											<p class="body">
+												Each of the weekend sessions is composed of visits to programs dealing with the significant issues of the day, especially with the training of young leaders. How are the Jesuits attempting to prepare men and women dedicated to the common good as opposed to a narrow focus on personal benefit? What are the obstacles to accomplishing this and maintaining programs that foster a new kind of civic leader?
+											</p>
+									</div>
+								</div><!-- panel-collapse -->
+							</div><!-- panel -->
+						</div><!-- panel-group -->
+
+
+
+
+
+
 				<h4 class="reverse" style="font-size:'Antenna Light', sans-serif !important;">Participants</h4>
-					<p class="body">C-suite executives, organizational leaders, and nonprofit executives nearing or in retirement, who want to use their accumulated skills and expertise in service of others, regardless of their faith tradition</p>
+					<p class="body">Our participants are C-suite executives, organizational leaders, and nonprofit executives nearing or in retirement, who want to use their accumulated skills and expertise in service to others, regardless of their faith tradition.</p>
+
 				<h4 class="reverse">Schedule</h4>
-					<p class="body">Four-day retreat sessions are held every two months. A full schedule of the six retreat sessions will be sent to those who apply. Four weekends are within the USA. Two additional weeks involve travel to Lima, Peru, to visit the work of the Jesuits in that country and the final experience for the Fellows will be a pilgrimage to Spain and Rome.</p>
-					<h4 class="reverse">Schedule</h4>
-						<p class="body">Four-day retreat sessions are held every two months. A full schedule of the six retreat sessions will be sent to those who apply. Four weekends are within the USA. Two additional weeks involve travel to Lima, Peru, to visit the work of the Jesuits in that country and the final experience for the Fellows will be a pilgrimage to Spain and Rome.</p>
-
-				<div class="panel-group accord-blk scroll" id="accordion">
-
-				  <div class="panel">
-				    <div class="panel-heading">
-				      <h4 class="subhead uppercase">
-				        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-uno">
-				          Spiritual Guidance
-				          <span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
-				        </a>
-				      </h4>
-				    </div><!-- panel-heading -->
-				    <div id="collapse-numero-uno" class="panel-collapse collapse">
-				      <div class="panel-body">
-				        <p class="body">
-									The Exercises are designed to assist the individual facing an important life-decision. They begin with and build upon a careful examination of one’s life experiences and interior life. They encourage a careful examination of one’s motives and values. They foster the interior freedom that allows one to move forward with gratitude for one’s past and a deepening of one’s commitments toward the future. Expert guides are provided for the newcomer to the Exercises.
-				        </p>
-				      </div>
-				    </div><!-- panel-collapse -->
-				  </div><!-- panel -->
-
-				  <div class="panel">
-				    <div class="panel-heading">
-				      <h4 class="subhead uppercase">
-				        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-dos">
-				          Intellectual Stimulation
-				          <span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
-				        </a>
-				      </h4>
-				    </div><!-- panel-heading -->
-				    <div id="collapse-numero-dos" class="panel-collapse collapse">
-				      <div class="panel-body">
-				          <p class="body">
-										The highly dialogical and interactive sessions encourage participants to engage assigned readings and the presentations of thought-provoking speakers, as well as discussions with faculty and students.
-				          </p>
-				      </div>
-				    </div><!-- panel-collapse -->
-				  </div><!-- panel -->
-
-					<div class="panel">
-						<div class="panel-heading">
-							<h4 class="subhead uppercase">
-								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-tres">
-									Sharing Professional Expertise
-									<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
-								</a>
-							</h4>
-						</div><!-- panel-heading -->
-						<div id="collapse-numero-tres" class="panel-collapse collapse">
-							<div class="panel-body">
-									<p class="body">
-										Each of the weekend sessions is composed of visits to programs dealing with the significant issues of the day, and especially with the training of young leaders. How are the Jesuits attempting to prepare men and women dedicated to the common good as opposed to a narrow focus on personal benefit? What are the obstacles to accomplishing this and maintaining programs that foster a new kind of civic leader?									</p>
-									</p>
-							</div>
-						</div><!-- panel-collapse -->
-					</div><!-- panel -->
-
-				</div><!-- panel-group -->
-
+					<p class="body">The full schedule of the six retreat sessions will be sent to those who apply. The schedule includes four four-day retreat sessions every two months in the United States and two weeklong sessions: one involves travel to Lima, Peru, to visit the work of the Jesuits in that country, and the final weeklong session is a pilgrimage to Spain and Rome.</p>
 
 			</div>
 			<div class="col-md-3 p-r-0">
 			</div>
 	</div>
 </div>
-
-<script>
-$(function () {
-$('.carousel').carousel({
-interval: false
-});
-});
-
-$(".carousel").swipe({
-swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-if (direction == 'left') $(this).carousel('next');
-if (direction == 'right') $(this).carousel('prev');
-},
-allowPageScroll:"vertical"
-});
-
-$('.carousel-split').each(function() {
-var carouselSelect = $(this);
-var totalItems = carouselSelect.find('.item').length;
-var currentIndex = carouselSelect.find('div.active').index() + 1;
-$('.counter').html(''+currentIndex+'/'+totalItems+'');
-$('.carousel').on('slid.bs.carousel', function () {
-currentIndex = $('div.active').index() + 1;
-$('.counter').html(''+currentIndex+'/'+totalItems+'');
-});
-});
-
-</script>
  <!-- parallax - slide - content ABOUT -->
 
 		<div class="slide5"></div>
@@ -233,79 +236,85 @@ $('.counter').html(''+currentIndex+'/'+totalItems+'');
 		<!-- panel - canvas-2-col-accordion -->
 <div id="parallax-panel-six" class="container-fluid bg-white canvas-parallax-panel slide6">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-9 p-l-0 canvas-parallax-panel-padding">
-				<h1 class="display"> <span class="thin">The Journey</span><br></h1>
-					<p class="body">
-						Moving away from the world of daily responsibilities of management and leadership, Ignatian Legacy Fellows come together six times over the course of a calendar year to explore the meaning of retirement and the opportunities that lie ahead.
-					</p>
-
-
-				<div class="panel-group accord-blk scroll" id="accordion">
-
-				  <div class="panel">
-				    <div class="panel-heading">
-				      <h4 class="subhead uppercase">
-				        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-nombre-un">
-				          The Journey involves a turn inward.
-				          <span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
-				        </a>
-				      </h4>
-				    </div><!-- panel-heading -->
-				    <div id="collapse-nombre-un" class="panel-collapse collapse">
-				      <div class="panel-body">
-				        <p class="body">
-									It begins with personal reflection and a chance to explore with others on a similar journey, and with experts in spiritual direction, how God has acted in one’s life, and how God may be calling us toward a new chapter that involves sharing one’s time and talent with those in need. Using the Spiritual Exercises of St. Ignatius, Fellows will have the opportunity to deepen their own spiritual lives at this critical juncture in their own journey.
-				        </p>
-				      </div>
-				    </div><!-- panel-collapse -->
-				  </div><!-- panel -->
-
-				  <div class="panel">
-				    <div class="panel-heading">
-				      <h4 class="subhead uppercase">
-				        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-nombre-deux">
-				          The Journey involves moving with a cohort of fellow leaders.
-				          <span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
-				        </a>
-				      </h4>
-				    </div><!-- panel-heading -->
-				    <div id="collapse-nombre-deux" class="panel-collapse collapse">
-				      <div class="panel-body">
-				          <p class="body">
-										Ignatian Legacy Fellows will be not only engaging with one another, but will be learning the theological and spiritual roots that underlie the faith-based works of Jesuits in education, health care, and social welfare, as well as the international dimensions of the work of the Society of Jesus.
-				          </p>
-				      </div>
-				    </div><!-- panel-collapse -->
-				  </div><!-- panel -->
-
-					<div class="panel">
-						<div class="panel-heading">
-							<h4 class="subhead uppercase">
-								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-nombre-trois">
-									The Journey involves turning toward the broader community.
-									<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
-								</a>
-							</h4>
-						</div><!-- panel-heading -->
-						<div id="collapse-nombre-trois" class="panel-collapse collapse">
-							<div class="panel-body">
-									<p class="body">
-										Each of the six sessions is designed to introduce the cohort to the issues and concerns faced by the leadership of these institutions and programs. Together, the Fellows and the local leaders of faith-based programs will share insights, opportunities, and strategies for handling today’s leadership challenges based on their own experience in management, marketing, organizational development, fundraising, and strategic planning.
-									</p>
-							</div>
-						</div><!-- panel-collapse -->
-					</div><!-- panel -->
-
-				</div><!-- panel-group -->
-
+		<div class="col-md-9 canvas-parallax-panel-padding p-l-0">
+			<h1 class="display"> <span class="thin">The Journey</span><br></h1>
 				<p class="body">
-					At the conclusion of the year-long program, Ignatian Legacy Fellows will be invited to become a member of the Society of Ignatian Fellows, a forum for the exchange of ideas in the spirituality and mission of the Society of Jesus and its works.
+					Moving away from the world of daily responsibilities of management and leadership, Ignatian Legacy Fellows come together six times over the course of a calendar year to explore the meaning of retirement and the opportunities that lie ahead.
 				</p>
 
-			</div>
-			<div class="col-md-3 p-r-0">
-			</div>
+
+					<!-- ACCORDION BELOW ||||||||||||||||||||||||||||||||||| -->
+
+					<div class="panel-group accord-blk scroll" id="accordion">
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="subhead uppercase">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-un">
+										The Journey involves a turn inward
+										<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+									</a>
+								</h4>
+							</div><!-- panel-heading -->
+							<div id="collapse-numero-un" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p class="body">
+										It begins with personal reflection and a chance to explore with others on a similar journey how God has acted in one’s life and how God may be calling us toward a new chapter that involves sharing one’s time and talent with those in need. Using the Spiritual Exercises of St. Ignatius, Fellows, with the guidance of experts in spiritual direction, will have the opportunity to deepen their own spiritual lives at this critical juncture in their own journey.
+									</p>
+								</div>
+							</div><!-- panel-collapse -->
+						</div><!-- panel -->
+
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="subhead uppercase">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-deux">
+										The Journey involves moving with a cohort of fellow leaders
+										<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+									</a>
+								</h4>
+							</div><!-- panel-heading -->
+							<div id="collapse-numero-deux" class="panel-collapse collapse">
+								<div class="panel-body">
+										<p class="body">
+											Ignatian Legacy Fellows will be not only engaging with one another, but will be learning the theological and spiritual roots that underlie the faith-based works of Jesuits in education, health care, and social welfare, as well as the international dimensions of the work of the Society of Jesus.
+										</p>
+								</div>
+							</div><!-- panel-collapse -->
+						</div><!-- panel -->
+
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="subhead uppercase">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-trois">
+										The Journey involves turning toward the broader community
+										<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+									</a>
+								</h4>
+							</div><!-- panel-heading -->
+							<div id="collapse-numero-trois" class="panel-collapse collapse">
+								<div class="panel-body">
+										<p class="body">
+											Together, the Fellows and the local leaders of faith-based programs will share insights, opportunities, and strategies for handling today’s leadership challenges based on their own experience in management, marketing, organizational development, fundraising, and strategic planning. Each of the six sessions is designed to introduce the cohort to the issues and concerns faced by the leadership of these institutions and programs.
+										</p>
+								</div>
+							</div><!-- panel-collapse -->
+						</div><!-- panel -->
+					</div><!-- panel-group -->
+
+					 <!-- ACCORDION ABOVE ||||||||||||||||||||||||||||||||||| -->
+
+
+			<p class="body">
+				At the conclusion of the yearlong program, Ignatian Legacy Fellows will be invited to become members of the Society of Ignatian Fellows, an ongoing forum for the exchange of ideas in the spirituality and mission of the Society of Jesus and its works.
+			</p>
+
+		</div>
+		<div class="col-md-3 p-r-0">
+			<blockquote class="blockquote-standard display uppercase">
+				<!-- <div class="open-quote">&lsquo;</div> -->
+				&ldquo;Blockquote could go here if desired. Lorem ipsum dei gloriam.&rdquo;
+			</blockquote>
+			<cite class="cite-standard m-t-0 m-b-0">— Someone Namehere</cite>
 		</div>
 	</div>
 </div>
@@ -332,7 +341,7 @@ $('.counter').html(''+currentIndex+'/'+totalItems+'');
 						Print and complete the application form.
 					</li>
 					<li>
-						Submit the application, along with your resume, by June 30, 2018, to:<br>
+						Submit the application, along with your resume to:<br>
 						<div id="contact">
 						Mariann Salisbury<br>
 						Loyola University Chicago<br>
@@ -424,33 +433,5 @@ $(window).on('scroll', function() {
 	<script src="js/sizzle.js"></script>
 	<!-- endinject -->
 </body>
-
-<script>
-$(function () {
-$('.carousel').carousel({
-interval: false
-});
-});
-
-$(".carousel").swipe({
-swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-if (direction == 'left') $(this).carousel('next');
-if (direction == 'right') $(this).carousel('prev');
-},
-allowPageScroll:"vertical"
-});
-
-$('.carousel-split').each(function() {
-var carouselSelect = $(this);
-var totalItems = carouselSelect.find('.item').length;
-var currentIndex = carouselSelect.find('div.active').index() + 1;
-$('.counter').html(''+currentIndex+'/'+totalItems+'');
-$('.carousel').on('slid.bs.carousel', function () {
-currentIndex = $('div.active').index() + 1;
-$('.counter').html(''+currentIndex+'/'+totalItems+'');
-});
-});
-
-</script>
 
 </html>

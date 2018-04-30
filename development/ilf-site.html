@@ -8,18 +8,6 @@
 
 <style>.subnave{display: none;}.homenav{display: block;}</style>
 
-</head>
-<body class="canvas-parallax">
-<section id="wrapper">
-	@@include('./partials/header-ilf.html') <!-- header-fpo -->
-	@@include('./partials/main-content-ilf-site.html') <!-- main-content-interior -->
-	@@include('./partials/footer-fpo.html') <!-- footer-close -->
-</section>
-	@@include('./partials/footer-close-fpo.html') <!-- footer-close -->
-	<!-- inject:js -->
-	<!-- endinject -->
-</body>
-
 <script>
 $(function () {
 $('.carousel').carousel({
@@ -47,5 +35,17 @@ $('.counter').html(''+currentIndex+'/'+totalItems+'');
 });
 
 </script>
+
+</head>
+<body class="canvas-parallax">
+<section id="wrapper">
+	@@include('./partials/header-ilf.html') <!-- header-fpo -->
+	@@include('./partials/main-content-ilf-site.html') <!-- main-content-interior -->
+	@@include('./partials/footer-fpo.html') <!-- footer-close -->
+</section>
+	@@include('./partials/footer-close-fpo.html') <!-- footer-close -->
+	<!-- inject:js -->
+	<!-- endinject -->
+</body>
 
 </html>

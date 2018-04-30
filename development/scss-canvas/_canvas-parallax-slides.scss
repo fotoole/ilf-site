@@ -259,6 +259,7 @@ ol {
 #parallax-panel-eight > div > div > div.col-md-9.p-l-0.canvas-parallax-panel-padding > p > a {
 	color:#eaaa00 !important;
 	cursor: pointer;
+	letter-spacing: 0.9px;
 }
 
 #accordion > div > div.panel-heading > h4 > a {
@@ -386,6 +387,54 @@ ol li {
   font-size: 1em;
   margin-top: 25px;
 }
+
+#wordmark {
+	width: 90%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#accordion > div > div.panel-heading > h4 {
+	font-size: 0.84em;
+}
+
+#accordion > div:nth-child(3) > div.panel-heading {
+	margin-bottom: 25px;
+}
+
+#collapse-numero-tres > div > p {
+	margin-top: -25px;
+}
+
+#wrapper > div:last-child {
+	display:none;
+}
+
+#accordion p.body {
+	font-size: 0.975em;
+}
+
+// #parallax-panel-six > div > div.col-md-3.p-r-0 {
+// 	padding-top:70px;
+// }
+
+#parallax-panel-six blockquote,
+#parallax-panel-six cite {
+	color:white;
+}
+
+blockquote {
+	font-family: "Antenna Light", sans-serif;
+	margin-top: 80px !important;
+	padding-top:100px !important;
+}
+
+#parallax-panel-six div.col-md-3 {
+	padding-left:50px !important;
+}
+
+
+
 
 
 /*  FO on ILF above  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
