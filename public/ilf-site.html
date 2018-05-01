@@ -49,17 +49,47 @@
 <!-- inject:css -->
 <link rel="stylesheet" href="css/styles.css">
 <!-- endinject -->
-<link rel="stylesheet" href="/css-canvas/styles-canvas.css">
+<link rel="stylesheet" href="css-canvas/styles-canvas.css">
 
 <style>.subnave{display: none;}.homenav{display: block;}</style>
+
+<script>
+$(function () {
+$('.carousel').carousel({
+interval: false
+});
+});
+
+$(".carousel").swipe({
+swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+if (direction == 'left') $(this).carousel('next');
+if (direction == 'right') $(this).carousel('prev');
+},
+allowPageScroll:"vertical"
+});
+
+$('.carousel-split').each(function() {
+var carouselSelect = $(this);
+var totalItems = carouselSelect.find('.item').length;
+var currentIndex = carouselSelect.find('div.active').index() + 1;
+$('.counter').html(''+currentIndex+'/'+totalItems+'');
+$('.carousel').on('slid.bs.carousel', function () {
+currentIndex = $('div.active').index() + 1;
+$('.counter').html(''+currentIndex+'/'+totalItems+'');
+});
+});
+
+</script>
+
 </head>
 <body class="canvas-parallax">
 <section id="wrapper">
-	<!-- HEADER - MASTHEAD -->
-<div class="container-fluid bg-overlay-dark" style="height: 100px; background: rgba(0,0,0,.65);">
+	
+<div class="container-fluid" id="header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div id="wordmark-wrapper" class="col-sm-3">
+				<a href="http://www.luc.edu"><img class="img-responsive" id="wordmark" src="http://www.luc.edu/media/home/images/luc-logo.png" /></a>
 			</div>
 		</div>
 	</div>
@@ -71,180 +101,296 @@
 <!-- SLIDE 1 - IMAGE ----------------------------------->
 
 <section id="slide1" class="bg-gray-dark">
-	<div id="slide1" class="container-fluid p-0">
-		<img class="p-0 m-0" src="images/00-canvas-parallax-image-light-fpo-1800-735.jpg">
-		<!-- <div id="overlay-headline-panel" class="container-fluid">
+	<div id="slide1" class="container-fluid p-0" style="background-color:#922247;">
+
+		<div id="overlay-headline-panel" class="container-fluid">
 			<div class="container">
 				<div class="col-md-12 overlay-headline">
 					<h1 class="uppercase">
-						<a class="reverse" href="###">Headline here</a>
-							<span class="overlay-headline-separator reverse" style="font-family: 'Antenna Thin', sans-serif !important; margin: 0 10px; position: relative; top: -2px;">
-								&#124;
-							</span>
-						<a class="smooth-scroll reverse" href="#anchor-panel-id-two">Headline here</a>
-								<ul id="social">
-									<li><a class="icon-fb" title="Follow us on Facebook" href="https://facebook.com/arrupechicago"></a></li>
-									<li><a class="icon-tw" title="Follow us on Twitter" href="https://twitter.com/arrupechicago"></a></li>
-									<li><a class="icon-yt" title="Follow us on Youtube" href="https://www.youtube.com/channel/UCuIaornYrkFXe81Pkc8mhBw "></a></li>
-								</ul> -->
+						<a class="reverse" href="#parallax-panel-eight">APPLY FOR FALL 2018 &nbsp; &#124; &nbsp; CONTACT US</a>
 					</h1>
 				</div>
 			</div>
 		</div>
+
+		<div class="holder">
+			<div class="banner">
+				<div class="John"><img src="images/knot-logo-ko.png"></div>
+			</div>
+			<div class="scroller">
+				<div class="John">SCROLL</div>
+				<div class="John"><a href="#parallax-panel-two"><img src="images/luc-edu-accordion-arrow-down-b.png" style="margin:0 auto;"></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" style="padding:0;">
+
+		<img src="images/mixer.jpg" style="margin:0;">
 	</div>
 </section>
  <!-- parallax - top - image -->
 		<!-- panel - canvas-2-col-accordion -->
 <div id="parallax-panel-two" class="container-fluid bg-white canvas-parallax-panel slide2">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<h1 class="display"> <span class="thin">Imagine Your</span> Future</h1>
-			<div class="col-md-6 p-l-0">
-				<p class="body">The Ignatian Legacy Leaders Fellowship Program is an invitation to imagine your future. Look back on your career in leadership and mine from those experiences to determine your next step, all while deepening your faith journey. Who can benefit from the wisdom and skills that you have acquired?</p>
+	<div class="container">
+			<div class="col-md-9 p-l-0 canvas-parallax-panel-padding">
+				<h1 class="display"> <span class="thin">Do you want to create an</span> intentional <span class="thin"> and</span> meaningful <span class="thin">retirement? </span></h1>
+				<p class="intro">Will you go it alone or would you like to accompany a cohort of Ignatian Legacy Fellows who are engaged in the transition to the third chapter of life?</p>
+				<p class="intro">The Ignatian Legacy Fellows Program is a yearlong program hosted by Loyola University Chicago, Santa Clara University, and Georgetown University that includes personal reflection, guided meditation, spiritual readings and discussion, and volunteer service – that all point toward helping participants better understand where they might be called to use their gifts in service to others.</p>
 			</div>
-			<div class="col-md-6 p-r-0">
-					<p class="body">Now is your time to examine the world’s problems and address them–through the eyes of Jesu it network leaders who are grappling with those problems. Together we’ll dis cover Jesuit expressions on poverty, injustice, the impacts of technology, the need for entrepreneurship, and sustainability. You will be exposed to “best thinking” while deciding where you want to invest your legacy leadership.</p>
+			<div class="col-md-3 p-r-0">
 			</div>
 		</div>
 	</div>
 </div>
- <!-- parallax - panel -->
-		<div class="slide3"></div>
- <!-- parallax - slide - image -->
+ <!-- parallax - panel - content INTRO -->
+
+		<div class="slide13"></div>
+ <!-- parallax - slide - image **************************** -->
 		<!-- panel - canvas-2-col-accordion -->
 <div id="parallax-panel-four" class="container-fluid bg-white canvas-parallax-panel slide4">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<h1 class="display"><span class="thin">Program</span> Overview </h1>
-			<div class="col-md-6 p-l-0">
-				<p class="body">The Ignatian Legacy Leaders Program is a yearlong program that includes personal reflection, guided meditation, spiritual readings and discussion, and volunteer service – all pointed towards helping participants better understand where they might be called to use their gifts in service of others.</p>
+	<div class="container">
+			<div class="col-md-9 canvas-parallax-panel-padding p-l-0">
+				<h1 class="display"><span class="thin">About</span></h1>
 
-				<p class="body m-t-20">Four-day retreat sessions are held every two months. These highly dialogical and interactive sessions encourage participants to discuss theological texts, engage with thought-provoking speakers, and share life experiences. Journaling, online reading, and response work complement the learning. </p>
+				<h4 class="reverse">Approach</h4>
+					<p class="body">The Ignatian Legacy Fellows program takes its shape from the plan of the Spiritual Exercises of St. Ignatius—preparing oneself spiritually, intellectually, and professionally.</p>
+
+	<!-- ACCORDION BELOW ||||||||||||||||||||||||||||||||||| -->
+
+						<div class="panel-group accord-blk scroll" id="accordion">
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="subhead uppercase">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-uno">
+											Spiritual Guidance
+											<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+										</a>
+									</h4>
+								</div><!-- panel-heading -->
+								<div id="collapse-numero-uno" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p class="body">
+											The Spiritual Exercises are designed to assist the individual in better understanding the purpose of his or her life. They begin with and build upon a careful examination of one’s life experiences and interior life and encourage a careful examination of one’s motives and values. They foster the interior freedom that allows one to move forward with gratitude for one’s past while deepening one’s commitments toward the future. Expert guides are provided for the newcomer to the Exercises.
+										</p>
+									</div>
+								</div><!-- panel-collapse -->
+							</div><!-- panel -->
+
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="subhead uppercase">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-dos">
+											Intellectual Stimulation
+											<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+										</a>
+									</h4>
+								</div><!-- panel-heading -->
+								<div id="collapse-numero-dos" class="panel-collapse collapse">
+									<div class="panel-body">
+											<p class="body">
+												The highly dialogical and interactive sessions encourage participants to engage with assigned readings and the presentations by thought-provoking speakers, as well as discussions with faculty and students.
+											</p>
+									</div>
+								</div><!-- panel-collapse -->
+							</div><!-- panel -->
+
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="subhead uppercase">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-tres">
+											Sharing Professional Expertise
+											<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+										</a>
+									</h4>
+								</div><!-- panel-heading -->
+								<div id="collapse-numero-tres" class="panel-collapse collapse">
+									<div class="panel-body">
+											<p class="body">
+												Each of the weekend sessions is composed of visits to programs dealing with the significant issues of the day, especially with the training of young leaders. How are the Jesuits attempting to prepare men and women dedicated to the common good as opposed to a narrow focus on personal benefit? What are the obstacles to accomplishing this and maintaining programs that foster a new kind of civic leader?
+											</p>
+									</div>
+								</div><!-- panel-collapse -->
+							</div><!-- panel -->
+						</div><!-- panel-group -->
+
+
+	<!-- ACCORDION ABOVE ||||||||||||||||||||||||||||||||||| -->
+
+
+
+				<h4 class="reverse" style="font-size:'Antenna Light', sans-serif !important;">Participants</h4>
+					<p class="body">
+						Our participants are C-suite executives, organizational leaders, and nonprofit executives nearing or in retirement, who want to use their accumulated skills and expertise in service to others, regardless of their faith tradition.
+					</p>
+
+				<h4 class="reverse">Schedule</h4>
+					<p class="body">
+						The full schedule of the six retreat sessions will be sent to those who apply. The schedule includes four four-day retreat sessions every two months in the United States and two weeklong sessions: one involves travel to Lima, Peru, to visit the work of the Jesuits in that country, and the final weeklong session is a pilgrimage to Spain and Rome.
+					</p>
+
+			</div> <!-- col-md-9 -->
+			<div class="col-md-3 p-r-0">
 			</div>
-			<div class="col-md-6 p-r-0">
-					<p class="body">In addition to these retreat sessions, participants will also embark on a service immersion trip to a Jesuit mission in Lima, Peru. The program culminates with a pilgrimage to Spain, to visit Barcelona, St. Ignatius’ birthplace, and Manresa, where he wrote the Spiritual Exercises.</p>
-			</div>
-		</div>
 	</div>
 </div>
- <!-- parallax - slide - content -->
+ <!-- parallax - slide - content ABOUT -->
+
 		<div class="slide5"></div>
- <!-- parallax - slide - image -->
+ <!-- parallax - slide - image  **************************** -->
 		<!-- panel - canvas-2-col-accordion -->
 <div id="parallax-panel-six" class="container-fluid bg-white canvas-parallax-panel slide6">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<h1 class="display"> <span class="thin">Who Should</span> Participate?</h1>
-			<div class="col-md-6 p-l-0">
-				<ul>
-					<li class="body">C-suite executives, organizational leaders and nonprofit executives nearing or in retirement who want to use their accumulated skills and expertise in service of others</li>
-					<li class="body">Jesuit educated leaders looking to reconnect with their Jesuit roots in retirement</li>
-					<li class="body">Participants of all faiths are welcome and encouraged</li>
-				</ul>
-			</div>
-			<div class="col-md-6 p-r-0">
-					<img src="http://placehold.it/1000x560"/>
-					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.</p>
-			</div>
+	<div class="container">
+		<div class="col-md-9 canvas-parallax-panel-padding p-l-0">
+			<h1 class="display"> <span class="thin">The Journey</span><br></h1>
+				<p class="body">
+					Moving away from the world of daily responsibilities of management and leadership, Ignatian Legacy Fellows come together six times over the course of a calendar year to explore the meaning of retirement and the opportunities that lie ahead.
+				</p>
+
+
+					<!-- ACCORDION BELOW ||||||||||||||||||||||||||||||||||| -->
+
+					<div class="panel-group accord-blk scroll" id="accordion">
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="subhead uppercase">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-un">
+										The Journey involves a turn inward
+										<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+									</a>
+								</h4>
+							</div><!-- panel-heading -->
+							<div id="collapse-numero-un" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p class="body">
+										It begins with personal reflection and a chance to explore with others on a similar journey how God has acted in one’s life and how God may be calling us toward a new chapter that involves sharing one’s time and talent with those in need. Using the Spiritual Exercises of St. Ignatius, Fellows, with the guidance of experts in spiritual direction, will have the opportunity to deepen their own spiritual lives at this critical juncture in their own journey.
+									</p>
+								</div>
+							</div><!-- panel-collapse -->
+						</div><!-- panel -->
+
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="subhead uppercase">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-deux">
+										The Journey involves moving with a cohort of fellow leaders
+										<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+									</a>
+								</h4>
+							</div><!-- panel-heading -->
+							<div id="collapse-numero-deux" class="panel-collapse collapse">
+								<div class="panel-body">
+										<p class="body">
+											Ignatian Legacy Fellows will be not only engaging with one another, but will be learning the theological and spiritual roots that underlie the faith-based works of Jesuits in education, health care, and social welfare, as well as the international dimensions of the work of the Society of Jesus.
+										</p>
+								</div>
+							</div><!-- panel-collapse -->
+						</div><!-- panel -->
+
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="subhead uppercase">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-numero-trois">
+										The Journey involves turning toward the broader community
+										<span class="accordion-icon"><img src="images/luc-edu-accordion-arrow-white.png"></span>
+									</a>
+								</h4>
+							</div><!-- panel-heading -->
+							<div id="collapse-numero-trois" class="panel-collapse collapse">
+								<div class="panel-body">
+										<p class="body">
+											Together, the Fellows and the local leaders of faith-based programs will share insights, opportunities, and strategies for handling today’s leadership challenges based on their own experience in management, marketing, organizational development, fundraising, and strategic planning. Each of the six sessions is designed to introduce the cohort to the issues and concerns faced by the leadership of these institutions and programs.
+										</p>
+								</div>
+							</div><!-- panel-collapse -->
+						</div><!-- panel -->
+					</div><!-- panel-group -->
+
+					 <!-- ACCORDION ABOVE ||||||||||||||||||||||||||||||||||| -->
+
+
+			<p class="body">
+				At the conclusion of the yearlong program, Ignatian Legacy Fellows will be invited to become members of the Society of Ignatian Fellows, an ongoing forum for the exchange of ideas in the spirituality and mission of the Society of Jesus and its works.
+			</p>
+
+		</div> <!-- col-md-9 -->
+		<div class="col-md-3 p-r-0">
+			<blockquote class="blockquote-standard display uppercase">
+				<!-- <div class="open-quote">&lsquo;</div> -->
+				&ldquo;Blockquote could go here if desired. Lorem ipsum dei gloriam.&rdquo;
+			</blockquote>
+			<cite class="cite-standard m-t-0 m-b-0">— Someone Namehere</cite>
 		</div>
 	</div>
 </div>
- <!-- parallax - slide - content -->
+ <!-- parallax - slide - content THE JOURNEY -->
+
 		<div class="slide7"></div>
- <!-- parallax - slide - image -->
+ <!-- parallax - slide - image  **************************** -->
 		<!-- panel - canvas-2-col-accordion -->
 <div id="parallax-panel-eight" class="container-fluid bg-white canvas-parallax-panel slide8">
-	<div class="container canvas-parallax-panel-padding">
+	<div class="container">
 		<div class="col-md-12">
-			<h1 class="display">Apply</h1>
-			<div class="col-md-6 p-l-0">
-				<p class="body">Applicants are invited to apply now to begin the program in the fall of 2018. Participants are invited after submitting a brief resume and letter of intention.</p>
-				<p class="body"><span style="color:red;">At the conclusion of the year’s program, ILF participants will be</span><br>
-					<a class="cta"> Download the application PDF</a></p>
+			<div class="col-md-9 p-l-0 canvas-parallax-panel-padding">
+				<h1 class="display"><span class="thin">Apply and Contact</span></h1>
+
+				<p class="body">
+					Applicants are invited to apply now to begin the program later this year.
+				</p>
+
+				<ol>
+					<li>
+						<a href="images/ilf-application.pdf" class="cta" download> Download the PDF application</a>
+					</li>
+					<li>
+						Print and complete the application form.
+					</li>
+					<li>
+						Submit the application, along with your resume to:<br>
+						<div id="contact">
+						Mariann Salisbury<br>
+						Loyola University Chicago<br>
+						Lewis Towers 630<br>
+						820 N. Michigan Avenue<br>
+						Chicago, IL 60611<br>
+						</div>
+					</li>
+				</ol>
+
+				<p class="body">
+					For questions, please call Mariann Salisbury at 301-807-5369 or email <a href="mailto:msalisbury1@luc.edu" class="cta">msalisbury1@luc.edu</a>
+				</p>
+
 			</div>
-			<div class="col-md-6 p-r-0">
-					<p class="body">At the conclusion of the program, participants are invited to become a member of the Society of Ignatian Fellows, a forum for the exchange of ideas and sharing in the spirituality that ground the aims and mission of the Society of Jesus and its works.</p>
+			<div class="col-md-3">
 			</div>
 		</div>
 	</div>
 </div>
- <!-- parallax - slide - content -->
-		<div class="slide9"></div>
- <!-- parallax - slide - image -->
-		<!-- panel - canvas-2-col-accordion -->
-<div id="parallax-panel-ten" class="container-fluid bg-white canvas-parallax-panel slide10">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<div class="col-md-6 p-l-0">
-				<h5 class="label m-b-20">Canvas panel headline here</h5>
-				<h1 class="display">Hedgeline is here.</h1>
-				<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.<a class="cta"> Read more</a></p>
+ <!-- parallax - slide - content APPLY -->
+
+		<!-- footer-address -->
+<div class="container-fluid bg-gray" id="footer-address">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="vcard">
+<!-- navigation object : Home Footer -->
+					<div class="footercard">
+						<span class="fn org"> INSTITUTE OF PASTORAL STUDIES 820 North Michigan Avenue, Lewis Towers 630, Chicago, IL 60611 &middot; <span class="tel"> 773.274.3000 </span></a>
+					</div>
+					<div>
+						<a href="http://www.luc.edu/info/copyright_disclaimer.shtml">© Copyright &amp; Disclaimer 2018</a> <img class="logo photo" src="http://www.luc.edu/media/home/images/luc-logo.png" style="visibility:hidden;width:0px;height:0px;"> 
+					</div>
+				</div>
 			</div>
-			<div class="col-md-6 p-r-0">
-					<img src="http://placehold.it/1000x560"/>
-					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.</p>
-			</div>
-		</div>
-	</div>
-</div>
- <!-- parallax - slide - content -->
-		<div class="slide11"></div>
- <!-- parallax - slide - content -->
-		<!-- panel - canvas-2-col-accordion -->
-<div id="parallax-panel-twelve" class="container-fluid bg-white canvas-parallax-panel slide12">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<div class="col-md-6 p-l-0">
-				<h5 class="label m-b-20">Canvas panel headline here</h5>
-				<h1 class="display">Hedgeline is here.</h1>
-				<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.<a class="cta"> Read more</a></p>
-			</div>
-			<div class="col-md-6 p-r-0">
-					<img src="http://placehold.it/1000x560"/>
-					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.</p>
+			<div class="col-sm-3">
+				<a class="logo-tag" href="http://www.luc.edu"> <img class="img-responsive" src="http://www.luc.edu/media/home/images/loyola-logo-tag.png" alt="Loyola University Chicago"> </a>
 			</div>
 		</div>
 	</div>
 </div>
- <!-- parallax - slide - image -->
-		<div class="slide13"></div>
- <!-- parallax - slide - content -->
-		<!-- panel - canvas-2-col-accordion -->
-<div id="parallax-panel-fourteen" class="container-fluid bg-white canvas-parallax-panel slide14">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<div class="col-md-6 p-l-0">
-				<h5 class="label m-b-20">Canvas panel headline here</h5>
-				<h1 class="display">Hedgeline is here.</h1>
-				<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.<a class="cta"> Read more</a></p>
-			</div>
-			<div class="col-md-6 p-r-0">
-					<img src="http://placehold.it/1000x560"/>
-					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.</p>
-			</div>
-		</div>
-	</div>
-</div>
- <!-- parallax - slide - image -->
-		<div class="slide15"></div>
- <!-- parallax - slide - content -->
-		<!-- panel - canvas-2-col-accordion -->
-<div id="parallax-panel-sixteen" class="container-fluid bg-white canvas-parallax-panel slide16">
-	<div class="container canvas-parallax-panel-padding">
-		<div class="col-md-12">
-			<div class="col-md-6 p-l-0">
-				<h5 class="label m-b-20">Canvas panel headline here</h5>
-				<h1 class="display">Hedgeline is here.</h1>
-				<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.<a class="cta"> Read more</a></p>
-			</div>
-			<div class="col-md-6 p-r-0">
-					<img src="http://placehold.it/1000x560"/>
-					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit ligula a justo dignissim, in suscipit magna lobortis.</p>
-			</div>
-		</div>
-	</div>
-</div>
- <!-- parallax - slide - image -->
+ <!-- parallax - slide - content APPLY -->
 	</div>
 <!-- main-content -->
  <!-- main-content-interior -->
@@ -292,4 +438,5 @@ $(window).on('scroll', function() {
 	<script src="js/sizzle.js"></script>
 	<!-- endinject -->
 </body>
+
 </html>

@@ -4,13 +4,42 @@
 @@include('./partials/head.html')<!-- header -->
 <!-- inject:css -->
 <!-- endinject -->
-<link rel="stylesheet" href="/css-canvas/styles-canvas.css">
+<link rel="stylesheet" href="css-canvas/styles-canvas.css">
 
 <style>.subnave{display: none;}.homenav{display: block;}</style>
+
+<script>
+$(function () {
+$('.carousel').carousel({
+interval: false
+});
+});
+
+$(".carousel").swipe({
+swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+if (direction == 'left') $(this).carousel('next');
+if (direction == 'right') $(this).carousel('prev');
+},
+allowPageScroll:"vertical"
+});
+
+$('.carousel-split').each(function() {
+var carouselSelect = $(this);
+var totalItems = carouselSelect.find('.item').length;
+var currentIndex = carouselSelect.find('div.active').index() + 1;
+$('.counter').html(''+currentIndex+'/'+totalItems+'');
+$('.carousel').on('slid.bs.carousel', function () {
+currentIndex = $('div.active').index() + 1;
+$('.counter').html(''+currentIndex+'/'+totalItems+'');
+});
+});
+
+</script>
+
 </head>
 <body class="canvas-parallax">
 <section id="wrapper">
-	@@include('./partials/header-fpo.html') <!-- header-fpo -->
+	@@include('./partials/header-ilf.html') <!-- header-fpo -->
 	@@include('./partials/main-content-ilf-site.html') <!-- main-content-interior -->
 	@@include('./partials/footer-fpo.html') <!-- footer-close -->
 </section>
@@ -18,4 +47,5 @@
 	<!-- inject:js -->
 	<!-- endinject -->
 </body>
+
 </html>
