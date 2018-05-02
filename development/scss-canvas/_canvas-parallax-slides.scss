@@ -157,7 +157,6 @@ section.arrupe-introduction .image-mobile img, .image-mobile { display: none; }
 
 
 
-/*  FO on ILF below  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
 #parallax-panel-two h1 span,
 #parallax-panel-four h1 span,
@@ -288,8 +287,9 @@ ol {
 
 #slide1 > div.holder > div {
 	display: block;
-  width: 23%;
-  height: 320px;
+	float:none;
+  width: 27%;
+  // height: 320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -355,16 +355,21 @@ ol li {
   letter-spacing: 0.075em;
 	margin-left:auto;
 	margin-right:auto;
+	margin-top:-10px;
+}
+
+#slide1 .scroller a {
+	color:#bcbcbc;
+}
+
+#slide1 .scroller a:hover {
+	color:#eaaa00;
 }
 
 #slide1 > div.holder > div.scroller > img {
 	width:6%;
 	height:auto;
   margin-top: 3px !important;
-}
-
-.holder {
-	height:375px;
 }
 
 .vcard {
@@ -414,10 +419,6 @@ ol li {
 	font-size: 0.975em;
 }
 
-// #parallax-panel-six > div > div.col-md-3.p-r-0 {
-// 	padding-top:70px;
-// }
-
 #parallax-panel-six blockquote,
 #parallax-panel-six cite {
 	color:white;
@@ -433,16 +434,22 @@ blockquote {
 	padding-left:50px !important;
 }
 
+#footer-address > div > div > div.col-sm-9 > div > div:nth-child(2) > a {
+	color:blue;
+}
+
+#slide1 > div.holder > div.col-md-4.col-sm-6.scroller > a {
+	color:#bcbcbc;
+}
 
 
 
 
-/*  FO on ILF above  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/*   |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
 
 /* MEDIA QUERIES */
 /* ==============================================*/
-
 
 @media all and (min-device-width : 768px) and (max-device-width : 1024px) {
 
@@ -534,5 +541,21 @@ section.arrupe-introducton .image-mobile { margin: 0 0 -5px; }
 .image-mobile { display: block; margin: 0; padding: 0; min-width: 100%; width: 100%; background-color: #FFFFFF; }
 
 .image-mobile img { min-width: 100%; width: 100%; height: auto; }
+
+}
+
+
+/* fo media queries below |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  */
+
+
+@media all and (min-width : 768px) and (max-width : 1500px) {
+
+	// #slide1 > div.holder > div {
+	// 	height: 280px !important;
+	// }
+	//
+	// .holder {
+	// 	height: 340px !important;
+	// }
 
 }

@@ -1,3 +1,18 @@
+var acc = document.getElementsByClassName("accordion-ilf");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
 function rgb2hex(orig){
  var rgb = orig.replace(/\s/g,'').match(/^rgba?\((\d+),(\d+),(\d+)/i);
  return (rgb && rgb.length === 4) ? "#" +
@@ -1208,6 +1223,23 @@ if ( ! Modernizr.objectfit ) {
     }
   });
 }
+
+/* smooth scroll works on any anchor tag with the smooth-scroll class*/
+$('a.smooth-scroll').click(function() {
+	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+		var jQuerytarget = $(this.hash);
+			jQuerytarget = jQuerytarget.length && jQuerytarget || $('[name=' + this.hash.slice(1) + ']');
+				if (jQuerytarget.length) {
+					var fixedHeaderHeight = 225,
+					scrollSpeed = 400,
+					targetOffset = jQuerytarget.offset().top - fixedHeaderHeight;
+             $('html,body').animate({
+             	scrollTop: targetOffset
+             }, scrollSpeed, 'swing');
+             return false;
+         }
+  }
+});
 
 /**
  * stacktable.js
