@@ -26,11 +26,16 @@ h4.accordion-ilf {
 }
 
 .panel-ilf {
-    max-height: 0;
-    background-color: none;
-    border-bottom: solid 1px $gray-light;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+   max-height: 0;
+   background-color: none;
+   border-bottom: solid 1px $gray-light;
+   overflow: hidden;
+   transition: max-height 0.6s ease-in-out;
+}
+
+.panel-ilf.show {
+   opacity: 1;
+   max-height: 500px;
 }
 
 .panel-ilf p.body {
@@ -39,5 +44,6 @@ h4.accordion-ilf {
   font-size: .975em;
   line-height: 1.85;
 }
+
 
 /* END - CSS */
