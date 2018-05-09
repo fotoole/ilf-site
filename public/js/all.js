@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+
+var acc = document.getElementsByClassName("accordion-ilf");
+var panel = document.getElementsByClassName('panel-ilf');
+
+for (var i = 0; i < acc.length; i++) {
+   acc[i].onclick = function() {
+       var setClasses = !this.classList.contains('active');
+       setClass(acc, 'active', 'remove');
+       setClass(panel, 'show', 'remove');
+       if (setClasses) {
+           this.classList.toggle("active");
+           this.nextElementSibling.classList.toggle("show");
+       }
+   }
+}
+
+function setClass(els, className, fnName) {
+   for (var i = 0; i < els.length; i++) {
+       els[i].classList[fnName](className);
+   }
+}
+
+});
+
 function rgb2hex(orig){
  var rgb = orig.replace(/\s/g,'').match(/^rgba?\((\d+),(\d+),(\d+)/i);
  return (rgb && rgb.length === 4) ? "#" +
@@ -1208,6 +1233,23 @@ if ( ! Modernizr.objectfit ) {
     }
   });
 }
+
+/* smooth scroll works on any anchor tag with the smooth-scroll class*/
+$('a.smooth-scroll').click(function() {
+	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+		var jQuerytarget = $(this.hash);
+			jQuerytarget = jQuerytarget.length && jQuerytarget || $('[name=' + this.hash.slice(1) + ']');
+				if (jQuerytarget.length) {
+					var fixedHeaderHeight = 225,
+					scrollSpeed = 400,
+					targetOffset = jQuerytarget.offset().top - fixedHeaderHeight;
+             $('html,body').animate({
+             	scrollTop: targetOffset
+             }, scrollSpeed, 'swing');
+             return false;
+         }
+  }
+});
 
 /**
  * stacktable.js
